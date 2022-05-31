@@ -18,7 +18,7 @@ class Tree {
       sym += root->value;
       perm.push_back(sym);
     }
-    if (root->value != "*") {
+    if (root->value != '*') {
       sym += root->value;
     }
     for (size_t i = 0; i < root->leaf.size(); i++) {
@@ -58,7 +58,7 @@ class Tree {
   }
   explicit Tree(std::vector<char> value) {
     root = new Node();
-    root->value = "*";
+    root->value = '*';
     buildTree(root, value);
     permutation(root);
   }
