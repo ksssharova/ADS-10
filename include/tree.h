@@ -13,7 +13,7 @@ class Tree {
   Node* root;
 
   std::vector<std::string> perm;
-  void permutation(Node* root, std::string sym = " ") {
+  void permutation(Node* root, std::string sym = "") {
     if (!root->leaf.size()) {
       sym += root->value;
       perm.push_back(sym);
@@ -25,7 +25,7 @@ class Tree {
       permutation(root->leaf[i], sym);
     }
   }
-  
+
   void buildTree(Node* root, std::vector<char> path) {
     if (!path.size()) {
       return;
